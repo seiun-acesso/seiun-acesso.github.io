@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Automação de Movimentação de Micros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.6, 0.2, 0.4, 1), transform 0.8s cubic-bezier(0.6, 0.2, 0.4, 1);
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+
+        <!-- Título Principal -->
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Automação de Movimentação de Micros
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600">
+                Um fluxo de trabalho otimizado para mais eficiência e segurança.
+            </p>
+        </header>
+
+        <main class="space-y-12 md:space-y-16">
+            <!-- Objetivo -->
+            <section class="fade-in-section bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 p-8 rounded-2xl shadow-md border border-gray-200 card-hover">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0 bg-blue-100 p-4 rounded-full">
+                        <i data-lucide="target" class="w-12 h-12 text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-blue-800 mb-3">Nosso Objetivo</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Otimizar a movimentação de micros no domínio, garantindo um processo com mais agilidade, padronização e total rastreabilidade, minimizando a intervenção manual.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Como Funciona -->
+            <section class="fade-in-section bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Como a Automação Funciona</h2>
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden md:block"></div>
+            
+                    <div class="space-y-12">
+                        <!-- Passo 1: Monitoramento -->
+                        <div class="flex md:flex-row flex-col items-center relative">
+                            <div class="md:w-1/2 md:pr-8 md:text-right">
+                                <div class="bg-white p-6 rounded-2xl border border-gray-200 inline-block card-hover">
+                                    <h3 class="text-xl font-bold text-green-800 flex items-center justify-end md:flex-row-reverse">
+                                        <span>1. Monitoramento</span>
+                                        <i data-lucide="monitor-dot" class="w-6 h-6 text-green-600 mx-3"></i>
+                                    </h3>
+                                    <p class="text-gray-600 mt-2">A automação vigia a OU "Computers", a porta de entrada para todas as novas máquinas no domínio.</p>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0 z-10">
+                                <div class="h-6 w-6 bg-blue-500 rounded-full border-4 border-white mx-auto"></div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0"></div>
+                        </div>
+            
+                        <!-- Passo 2: Verificação -->
+                        <div class="flex md:flex-row-reverse flex-col items-center relative">
+                            <div class="md:w-1/2 md:pl-8 md:text-left">
+                                 <div class="bg-white p-6 rounded-2xl border border-gray-200 inline-block card-hover">
+                                    <h3 class="text-xl font-bold text-purple-800 flex items-center">
+                                         <i data-lucide="clock" class="w-6 h-6 text-purple-600 mr-3"></i>
+                                         <span>2. Verificação</span>
+                                    </h3>
+                                    <p class="text-gray-600 mt-2">A cada 2 minutos, o sistema verifica se novos micros ingressaram na OU padrão.</p>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0 z-10">
+                                <div class="h-6 w-6 bg-blue-500 rounded-full border-4 border-white mx-auto"></div>
+                            </div>
+                            <div class="md:w-1/2 md:pr-8 mt-6 md:mt-0"></div>
+                        </div>
+            
+                        <!-- Passo 3: Movimentação -->
+                         <div class="flex md:flex-row flex-col items-center relative">
+                            <div class="md:w-1/2 md:pr-8 md:text-right">
+                                <div class="bg-white p-6 rounded-2xl border border-gray-200 inline-block card-hover">
+                                    <h3 class="text-xl font-bold text-yellow-800 flex items-center justify-end md:flex-row-reverse">
+                                        <span>3. Análise e Movimentação</span>
+                                        <i data-lucide="move" class="w-6 h-6 text-yellow-600 mx-3"></i>
+                                    </h3>
+                                    <p class="text-gray-600 mt-2">Se um micro atende aos critérios (SO homologado, nomenclatura correta), ele é movido para sua OU de destino.</p>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0 z-10">
+                                <div class="h-6 w-6 bg-blue-500 rounded-full border-4 border-white mx-auto"></div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0"></div>
+                        </div>
+            
+                        <!-- Passo 4: Comunicação -->
+                        <div class="flex md:flex-row-reverse flex-col items-center relative">
+                            <div class="md:w-1/2 md:pl-8 md:text-left">
+                                 <div class="bg-white p-6 rounded-2xl border border-gray-200 inline-block card-hover">
+                                    <h3 class="text-xl font-bold text-pink-800 flex items-center">
+                                         <i data-lucide="message-square-text" class="w-6 h-6 text-pink-600 mr-3"></i>
+                                         <span>4. Registro e Comunicação</span>
+                                    </h3>
+                                    <p class="text-gray-600 mt-2">Cada evento é registrado e notificado em tempo real para um canal no Microsoft Teams.</p>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0 z-10">
+                                <div class="h-6 w-6 bg-blue-500 rounded-full border-4 border-white mx-auto"></div>
+                            </div>
+                            <div class="md:w-1/2 md:pr-8 mt-6 md:mt-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Tipos de Logs -->
+            <section class="fade-in-section">
+                <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Exemplos de Logs no Teams</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Sucesso -->
+                    <div class="bg-green-50 p-6 rounded-xl border border-green-200 card-hover">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-green-600 mr-3"></i>
+                            <h3 class="font-semibold text-lg text-green-900">Movido com Sucesso</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">O micro atendeu a todos os critérios e foi movido para a OU correta automaticamente.</p>
+                        <img src="assets/img/mov_micro/log1.png" alt="Exemplo de log de sucesso" class="mt-4 rounded-lg shadow-md w-full">
+                    </div>
+                    <!-- Manual -->
+                    <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-200 card-hover">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-yellow-600 mr-3"></i>
+                            <h3 class="font-semibold text-lg text-yellow-900">Movimentação Manual</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">Geralmente ocorre com notebooks, que exigem uma verificação manual.</p>
+                        <img src="assets/img/mov_micro/log2.png" alt="Exemplo de log de movimentação manual" class="mt-4 rounded-lg shadow-md w-full">
+                    </div>
+                    <!-- Não Encontrado -->
+                    <div class="bg-orange-50 p-6 rounded-xl border border-orange-200 card-hover">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="search-x" class="w-6 h-6 text-orange-600 mr-3"></i>
+                            <h3 class="font-semibold text-lg text-orange-900">Não Encontrado no CSV</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">A nomenclatura do micro não está cadastrada. O cadastro será realizado pela equipe.</p>
+                        <img src="assets/img/mov_micro/log3.png" alt="Exemplo de log de micro não encontrado" class="mt-4 rounded-lg shadow-md w-full">
+                    </div>
+                     <!-- SO não Identificado -->
+                     <div class="bg-red-50 p-6 rounded-xl border border-red-200 card-hover">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-600 mr-3"></i>
+                            <h3 class="font-semibold text-lg text-red-900">SO não Identificado</h3>
+                        </div>
+                        <p class="text-sm text-gray-600">O sistema não identificou o SO. Uma reinicialização do micro resolve o problema.</p>
+                        <img src="assets/img/mov_micro/log4.png" alt="Exemplo de log de SO não identificado" class="mt-4 rounded-lg shadow-md w-full">
+                    </div>
+                    <!-- SO não Homologado Wrapper -->
+                    <div class="md:col-span-2 flex justify-center">
+                        <div class="bg-red-50 p-6 rounded-xl border border-red-200 card-hover md:w-1/2">
+                             <div class="flex items-center mb-2">
+                                <i data-lucide="ban" class="w-6 h-6 text-red-600 mr-3"></i>
+                                <h3 class="font-semibold text-lg text-red-900">SO não Homologado</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">Detectada a instalação de um sistema operacional não aprovado.</p>
+                            <img src="assets/img/mov_micro/log5.png" alt="Exemplo de log de SO não homologado" class="mt-4 rounded-lg shadow-md w-full">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Conclusão -->
+            <section class="fade-in-section bg-white hover:bg-gradient-to-r hover:from-green-50 hover:to-teal-50 p-8 rounded-2xl shadow-md border border-gray-200 card-hover">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-4">Conclusão</h2>
+                <p class="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+                    A automação já está em pleno funcionamento, proporcionando <strong class="text-green-700">maior eficiência</strong> e controle no processo de movimentação de micros, fortalecendo a <strong class="text-green-700">segurança</strong> do nosso ambiente de domínio.
+                </p>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-200">
+            <p class="text-gray-500">⚙️ Automação de Movimentação de Micros</p>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in-section');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                sections.forEach(section => observer.observe(section));
+            } else {
+                sections.forEach(section => section.classList.add('is-visible'));
+            }
+        });
+    </script>
+</body>
+</html>
