@@ -1,213 +1,249 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infográfico: Projeto de Exclusão de Contas</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.6, 0.2, 0.4, 1), transform 0.8s cubic-bezier(0.6, 0.2, 0.4, 1);
-        }
-
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infográfico: Projeto de Exclusão de Contas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.6, 0.2, 0.4, 1), transform 0.8s cubic-bezier(0.6, 0.2, 0.4, 1);
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+  <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
 
-        <header class="text-center mb-12 md:mb-16">
-            <h1 class="text-3xl md:text-5xl font-bold text-blue-900">Projeto de Exclusão de Contas Inativas</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-600">Fortalecendo a segurança e a governança do Active Directory (AD)</p>
-        </header>
+    <!-- HEADER -->
+    <header class="text-center mb-12 md:mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+        Projeto de Exclusão de Contas Inativas
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-gray-600">
+        Fortalecendo a segurança e a governança do Active Directory (AD)
+      </p>
+    </header>
 
-        <main class="space-y-12 md:space-y-16">
+    <main class="space-y-12 md:space-y-16">
 
-            <!-- Intro -->
-            <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 fade-in-section">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0 bg-red-100 p-4 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
-                    </div>
-                    <div>
-                        <h2 class="text-3xl font-bold text-red-800 mb-3">O Problema: Contas Inativas</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            Identificamos aproximadamente <strong class="text-red-600">20.000 contas de usuário</strong> desativadas e inativas há mais de <strong class="text-blue-600">5 anos</strong>, representando riscos de segurança e complexidade administrativa.
-                        </p>
-                    </div>
-                </div>
-            </section>
+      <!-- INTRO -->
+      <section class="bg-gradient-to-r from-red-50 to-pink-50 p-8 rounded-2xl shadow-md border border-red-100 fade-in-section card-hover">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="flex-shrink-0 bg-red-100 p-4 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-red-800 mb-3">O Problema: Contas Inativas</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Foram identificadas <strong class="text-red-600">20.000 contas de usuário</strong> desativadas e inativas há mais de <strong class="text-blue-600">5 anos</strong>, representando riscos de segurança e aumentando a complexidade administrativa.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <!-- Objetivo -->
-            <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 fade-in-section">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0 bg-blue-100 p-4 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-                    </div>
-                    <div>
-                        <h2 class="text-3xl font-bold text-blue-800 mb-3">Nosso Objetivo</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                           Excluir definitivamente as contas obsoletas para promover a integridade do AD, reduzir a superfície de ataque e otimizar os processos de conformidade e governança.
-                        </p>
-                    </div>
-                </div>
-            </section>
+      <!-- OBJETIVO -->
+      <section class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-md border border-blue-100 fade-in-section card-hover">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="flex-shrink-0 bg-blue-100 p-4 rounded-full">
+            <!-- 🎯 alvo -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-blue-800 mb-3">Nosso Objetivo</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Excluir definitivamente as contas obsoletas para garantir a <strong>integridade do AD</strong>, reduzir a superfície de ataque e otimizar os processos de conformidade.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <!-- beneficios -->
-            <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 fade-in-section">
-                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Benefícios Esperados</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center">
-                        <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" /></svg>
-                        <h3 class="font-semibold text-lg text-green-900 mb-2">Mais Segurança</h3>
-                        <p class="text-sm text-gray-600">Reduz a superfície de ataque e o risco de acessos indevidos.</p>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center">
-                         <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-                        <h3 class="font-semibold text-lg text-green-900 mb-2">Melhor Governança</h3>
-                        <p class="text-sm text-gray-600">Alinha o ambiente às melhores práticas e normas (LGPD, ISO 27001).</p>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center">
-                         <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
-                        <h3 class="font-semibold text-lg text-green-900 mb-2">Eficiência Operacional</h3>
-                        <p class="text-sm text-gray-600">Melhora a performance de consultas, sincronismo/replicação, backups e auditorias.</p>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center">
-                        <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
-                        <h3 class="font-semibold text-lg text-green-900 mb-2">Organização</h3>
-                        <p class="text-sm text-gray-600">Fornece uma visão mais clara e confiável do ambiente.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- riscos -->
-            <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 fade-in-section">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Riscos e Pontos de Atenção</h2>
-                <div class="space-y-4 max-w-2xl mx-auto">
-                     <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold text-red-800">Exclusão Indevida</h3>
-                            <span class="bg-red-200 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO ALTO</span>
-                        </div>
-                        <p class="text-red-700 text-sm mt-1">Risco de apagar contas de serviço ou caixas compartilhadas indevidamente.<br><strong>Mitigação:</strong> Análise detalhada e relatórios.</p>
-                    </div>
-                    <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold text-red-800">Conformidade Legal e Auditoria</h3>
-                            <span class="bg-red-200 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO ALTO</span>
-                        </div>
-                        <p class="text-red-700 text-sm mt-1">Após a exclusão, os registros e logs associados serão perdidos.<br><strong>Mitigação:</strong> Recomendamos a criação de uma política de retenção de informações.</p>
-                    </div>
-                     <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-xl">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold text-yellow-800">Recuperação Limitada</h3>
-                             <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO MÉDIO</span>
-                        </div>
-                        <p class="text-yellow-700 text-sm mt-1">Contas só podem ser restauradas pela Lixeira do AD.<br><strong>Mitigação:</strong> Considerar o prazo de recuperação de objetos da lixeira (aprox. 180 dias).</p>
-                    </div>
-                    <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold text-blue-800">Não Reaproveitamento de Login</h3>
-                            <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO BAIXO</span>
-                        </div>
-                        <p class="text-blue-700 text-sm mt-1">A ausência de uma rotina de exclusão em sistemas internos impede o reaproveitamento de nomes de usuário para novos colaboradores.<br><strong>Mitigação:</strong> O ideal é elaborar política de retenção de dados e, baseado nisso, aplicar rotina de exclusão nos sistemas, além de sempre validar cadastros de novos usuários.</p>
-                    </div>
-                    <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl">
-                        <div class="flex justify-between items-center">
-                             <h3 class="font-semibold text-blue-800">SIDs Órfãos</h3>
-                             <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO BAIXO</span>
-                        </div>
-                        <p class="text-blue-700 text-sm mt-1">A exclusão definitiva de contas pode gerar identificadores de segurança (SIDs) órfãos em recursos de redes e sistemas.<br><strong>Mitigação:</strong> Executar exclusão em lotes menores e monitorar possíveis impactos em recursos críticos.</p>
-                    </div>
-                </div>
-            </section>
+      <!-- BENEFÍCIOS -->
+      <section class="bg-white p-8 rounded-2xl shadow-md border border-green-100 fade-in-section">
+        <h2 class="text-3xl font-bold text-center text-green-800 mb-8">Benefícios Esperados</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 🛡️ Mais Segurança -->
+          <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center card-hover">
+            <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22c5-2 8-5 8-10V7l-8-4-8 4v5c0 5 3 8 8 10z"/>
+            </svg>
+            <h3 class="font-semibold text-lg text-green-900 mb-2">Mais Segurança</h3>
+            <p class="text-sm text-gray-600">Reduz riscos de acessos indevidos e superfície de ataque.</p>
+          </div>
+          <!-- 📄 Governança -->
+          <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center card-hover">
+            <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V7a2 2 0 00-2-2h-5l-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+            <h3 class="font-semibold text-lg text-green-900 mb-2">Melhor Governança</h3>
+            <p class="text-sm text-gray-600">Alinha-se a boas práticas e normas (LGPD, ISO 27001).</p>
+          </div>
+          <!-- ⚡ Eficiência -->
+          <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center card-hover">
+            <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <h3 class="font-semibold text-lg text-green-900 mb-2">Eficiência Operacional</h3>
+            <p class="text-sm text-gray-600">Otimiza consultas, replicações, relatórios e backups.</p>
+          </div>
+          <!-- Organização -->
+          <div class="bg-green-50 p-6 rounded-xl border border-green-200 text-center card-hover">
+            <svg class="w-12 h-12 mx-auto text-green-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            <h3 class="font-semibold text-lg text-green-900 mb-2">Organização</h3>
+            <p class="text-sm text-gray-600">Visão mais clara e confiável do ambiente de identidades.</p>
+          </div>
+        </div>
+      </section>
 
-            <!-- plano -->
-            <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 fade-in-section">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Recomendações de Execução</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-gray-100 p-6 rounded-xl border border-gray-200 flex items-start gap-4">
-                        <span class="text-blue-600 font-bold text-2xl mt-1">1.</span>
-                        <div>
-                            <h3 class="text-lg font-semibold text-blue-900">Levantamento Detalhado</h3>
-                            <p class="text-gray-600 mt-1">Gerar relatórios das contas, incluindo grupos e permissões.</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-xl border border-gray-200 flex items-start gap-4">
-                        <span class="text-blue-600 font-bold text-2xl mt-1">2.</span>
-                        <div>
-                            <h3 class="text-lg font-semibold text-blue-900">Validação de Contas</h3>
-                            <p class="text-gray-600 mt-1">Confirmar que a lista não inclui contas de serviço ou caixas compartilhadas.</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-xl border border-gray-200 flex items-start gap-4">
-                        <span class="text-blue-600 font-bold text-2xl mt-1">3.</span>
-                        <div>
-                            <h3 class="text-lg font-semibold text-blue-900">Backup e Contingência</h3>
-                            <p class="text-gray-600 mt-1">Validar a existência de backups atualizados do AD antes do início.</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-xl border border-gray-200 flex items-start gap-4">
-                        <span class="text-blue-600 font-bold text-2xl mt-1">4.</span>
-                        <div>
-                            <h3 class="text-lg font-semibold text-blue-900">Execução em Etapas</h3>
-                            <p class="text-gray-600 mt-1">Realizar a exclusão em lotes menores para monitorar impactos.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <!-- RISCOS -->
+      <section class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 fade-in-section">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Riscos e Pontos de Atenção</h2>
+        <div class="space-y-4 max-w-2xl mx-auto">
+          <div class="bg-red-50 border border-red-200 p-4 rounded-xl card-hover">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-red-800">Exclusão Indevida</h3>
+              <span class="bg-red-200 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO ALTO</span>
+            </div>
+            <p class="text-red-700 text-sm mt-1">
+              Possibilidade de apagar contas de serviço ou caixas compartilhadas.<br>
+              <strong>Mitigação:</strong> Relatórios e análise detalhada das contas.
+            </p>
+          </div>
+          <div class="bg-red-50 border border-red-200 p-4 rounded-xl card-hover">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-red-800">Conformidade Legal e Auditoria</h3>
+              <span class="bg-red-200 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO ALTO</span>
+            </div>
+            <p class="text-red-700 text-sm mt-1">
+              Após a exclusão, registros e logs relacionados serão perdidos.<br>
+              <strong>Mitigação:</strong> Criar política de retenção de informações.
+            </p>
+          </div>
+          <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-xl card-hover">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-yellow-800">Recuperação Limitada</h3>
+              <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO MÉDIO</span>
+            </div>
+            <p class="text-yellow-700 text-sm mt-1">
+              Contas só podem ser restauradas pela Lixeira do AD, dentro do prazo padrão (≈ 180 dias).<br>
+              <strong>Mitigação:</strong> Considerar esse período antes da exclusão definitiva.
+            </p>
+          </div>
+          <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl card-hover">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-blue-800">Não Reaproveitamento de Login</h3>
+              <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO BAIXO</span>
+            </div>
+            <p class="text-blue-700 text-sm mt-1">
+              A ausência de rotina de exclusão em sistemas internos impede o reaproveitamento de logins.<br>
+              <strong>Mitigação:</strong> Criar política de retenção de dados e validar novos cadastros.
+            </p>
+          </div>
+          <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl card-hover">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-blue-800">SIDs Órfãos</h3>
+              <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">RISCO BAIXO</span>
+            </div>
+            <p class="text-blue-700 text-sm mt-1">
+              Exclusão pode gerar SIDs órfãos em sistemas e recursos legados.<br>
+              <strong>Mitigação:</strong> Executar exclusão em lotes menores e monitorar impactos.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <!-- Conclusion -->
-            <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 fade-in-section">
-                <h2 class="text-3xl font-bold text-center text-green-800 mb-4">Conclusão</h2>
-                 <p class="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
-                    A exclusão das contas é uma ação estratégica. Recomenda-se a criação de uma <strong class="text-blue-600">política formal de retenção</strong> para padronizar critérios futuros e garantir a segurança jurídica e operacional.
-                 </p>
-            </section>
-        </main>
+      <!-- EXECUÇÃO -->
+      <section class="bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-2xl shadow-md border border-blue-100 fade-in-section">
+        <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Recomendações de Execução</h2>
+        <ol class="space-y-4 max-w-3xl mx-auto">
+          <li class="bg-white border border-gray-200 p-6 rounded-xl flex items-start gap-4 card-hover">
+            <span class="text-blue-600 font-bold text-2xl">1.</span>
+            <div>
+              <h3 class="font-semibold text-lg text-blue-900">Levantamento Detalhado</h3>
+              <p class="text-gray-600">Relatórios de contas, grupos e permissões.</p>
+            </div>
+          </li>
+          <li class="bg-white border border-gray-200 p-6 rounded-xl flex items-start gap-4 card-hover">
+            <span class="text-blue-600 font-bold text-2xl">2.</span>
+            <div>
+              <h3 class="font-semibold text-lg text-blue-900">Validação de Contas</h3>
+              <p class="text-gray-600">Garantir que não inclui contas de serviço.</p>
+            </div>
+          </li>
+          <li class="bg-white border border-gray-200 p-6 rounded-xl flex items-start gap-4 card-hover">
+            <span class="text-blue-600 font-bold text-2xl">3.</span>
+            <div>
+              <h3 class="font-semibold text-lg text-blue-900">Backup e Contingência</h3>
+              <p class="text-gray-600">Verificar backups do AD antes da exclusão.</p>
+            </div>
+          </li>
+          <li class="bg-white border border-gray-200 p-6 rounded-xl flex items-start gap-4 card-hover">
+            <span class="text-blue-600 font-bold text-2xl">4.</span>
+            <div>
+              <h3 class="font-semibold text-lg text-blue-900">Execução em Etapas</h3>
+              <p class="text-gray-600">Excluir em lotes menores e monitorar impactos.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-        <footer class="text-center mt-16 pt-8 border-t border-gray-200">
-            <p class="text-gray-500">Projeto de Exclusão de Contas Inativas</p>
-        </footer>
-    </div>
+      <!-- CONCLUSÃO -->
+      <section class="bg-gradient-to-r from-green-50 to-teal-50 p-8 rounded-2xl shadow-md border border-green-100 fade-in-section">
+        <h2 class="text-3xl font-bold text-center text-green-800 mb-4">Conclusão</h2>
+        <p class="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+          A exclusão definitiva fortalece a <strong class="text-green-700">segurança</strong>, melhora a <strong class="text-green-700">governança</strong> e aumenta a <strong class="text-green-700">eficiência</strong>.<br>
+          Recomenda-se a criação de uma <span class="text-blue-700 font-semibold">política formal de retenção</span> para garantir continuidade e respaldo jurídico.
+        </p>
+      </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.fade-in-section');
+    </main>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                    else {
-                        entry.target.classList.remove('is-visible');
-                    }
-                    
-                });
-            }, {
-                threshold: 0.1
-            });
+    <footer class="text-center mt-16 pt-8 border-t border-gray-200">
+      <p class="text-gray-500">📌 Projeto de Exclusão de Contas Inativas</p>
+    </footer>
+  </div>
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.fade-in-section');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        }, { threshold: 0.1 });
+        sections.forEach(section => observer.observe(section));
+      } else {
+        sections.forEach(section => section.classList.add('is-visible'));
+      }
+    });
+  </script>
 </body>
-
 </html>
-
